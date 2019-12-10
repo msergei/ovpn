@@ -5,7 +5,9 @@ volumes:
 
 services:
   srv:
-    image: kylemanna/openvpn-aarch64
+    build:
+      dockerfile: Dockerfile.aarch64
+      context: .
     volumes:
       - data:/etc/openvpn
     ports:
