@@ -1,0 +1,15 @@
+version: '2.4'
+
+volumes:
+  data: {}
+
+services:
+  srv:
+    image: kylemanna/openvpn
+    volumes:
+      - data:/etc/openvpn
+    ports:
+      - 443:1194/udp
+    cap_add:
+      - NET_ADMIN
+    restart: always
