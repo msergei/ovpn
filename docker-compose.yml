@@ -5,7 +5,7 @@ volumes:
 
 services:
   srv:
-    image: kylemanna/openvpn
+    image: kylemanna/openvpn-aarch64
     volumes:
       - data:/etc/openvpn
     ports:
