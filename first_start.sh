@@ -2,7 +2,7 @@
 
 # Example usage: ./first_start.sh my_openvpn_server.com
 
-if [ ! $1]; then
+if [ ! $1 ]; then
     export ADDR=$(curl https://ipinfo.io/ip);
 else
     export ADDR=$1;
