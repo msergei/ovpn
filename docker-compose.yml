@@ -5,7 +5,7 @@ volumes:
 
 services:
   srv:
-    image: mjenz/rpi-openvpn
+    image: kylemanna/openvpn
     volumes:
       - data:/etc/openvpn
     ports:
