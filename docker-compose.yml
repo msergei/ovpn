@@ -6,12 +6,12 @@ volumes:
 services:
   srv:
     build:
-      dockerfile: Dockerfile.aarch64
+      dockerfile: Dockerfile.arm32v7
       context: .
     volumes:
       - data:/etc/openvpn
     ports:
-      - 1194:1194/tcp
+      - 443:1194/udp
     cap_add:
       - NET_ADMIN
     restart: always
