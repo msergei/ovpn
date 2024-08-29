@@ -9,4 +9,4 @@ if [ ! $1 ]; then
   exit 0;
 fi
 
-docker-compose run srv ovpn_revokeclient $1 remove;
+docker compose run --rm srv ovpn_revokeclient $1 remove;

@@ -10,5 +10,6 @@ fi
 
 echo "Set OpenVPN server address to $ADDR"
 
-docker-compose run srv ovpn_genconfig -u udp://$ADDR;
-docker-compose run srv ovpn_initpki;
+docker compose run --rm srv ovpn_genconfig -u udp://$ADDR;
+docker compose run --rm srv ovpn_initpki;
+docker compose up -d;
