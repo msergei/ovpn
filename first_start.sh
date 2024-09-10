@@ -16,5 +16,5 @@ fi
 
 echo "Set OpenVPN server address to $ADDR and $PROTO"
 
-docker-compose run srv ovpn_genconfig -u $PROTO://$ADDR;
-docker-compose run srv ovpn_initpki;
+docker compose run srv ovpn_genconfig -u $PROTO://$ADDR;
+docker compose run srv ovpn_initpki;
